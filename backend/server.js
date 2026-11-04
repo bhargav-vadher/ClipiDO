@@ -15,6 +15,11 @@ app.get("/", (req, res) => {
     res.send("Backend is running!");
 });
 
+// Health check route
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'ok', uptime: process.uptime() });
+});
+
 app.listen(5000, () => {
     console.log("Server running on port 5000");
 });
