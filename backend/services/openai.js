@@ -45,7 +45,7 @@ Transcript:
 ${transcript}`;
 
   const response = await openai.chat.completions.create({
-    model: process.env.GROQ_MODEL || 'openai/gpt-oss-120b',
+    model: process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
     messages: [
       { role: 'system', content: 'You are an expert video editor. You must output valid JSON.' },
       { role: 'user', content: prompt }

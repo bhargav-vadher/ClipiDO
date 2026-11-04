@@ -6,7 +6,7 @@ const router = Router();
 
 const limiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour
-  max: 10,
+  max: 50,
   message: { error: 'rate_limit', message: 'Too many requests. Please try again later.' },
 });
 
