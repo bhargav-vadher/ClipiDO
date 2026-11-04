@@ -9,38 +9,45 @@
 //   server: { proxy: { '/api': 'http://localhost:5000' } },
 // })
 
-
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
-import { VitePWA } from 'vite-plugin-pwa'
+// frontend/vite.config.ts
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'ClipiDO',
+        id: '/',
+        name: 'ClipiDO - AI Video Clipper',
         short_name: 'ClipiDO',
         description: 'Find the 5 best Shorts moments in any video transcript.',
-        start_url: '/',
-        scope: '/',
+        theme_color: '#000000',
+        background_color: '#000000',
         display: 'standalone',
-        background_color: '#09090b',
-        theme_color: '#09090b',
+        start_url: '/',
         icons: [
-          { src: '/192.png', sizes: '192x192', type: 'image/png' },
-          { src: '/512.png', sizes: '512x512', type: 'image/png' },
-          { src: '/192.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
-        ],
-      },
-      workbox: {
-        navigateFallbackDenylist: [/^\/api/], // never treat API calls as pages
-      },
-      devOptions: { enabled: true },
-    }),
+          {
+            src: '/192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'any'
+          },
+          {
+            src: '/512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable'
+          }
+        ]
+      }
+    })
   ],
   server: { proxy: { '/api': 'http://localhost:5000' } },
-})
+});
+
+
+
+ 
