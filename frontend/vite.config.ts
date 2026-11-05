@@ -36,7 +36,7 @@ export default defineConfig({
             purpose: 'any'
           },
           {
-            src: '/Pwa3_512.png',
+            src: '/33333.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable'
