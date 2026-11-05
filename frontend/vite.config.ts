@@ -30,13 +30,13 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: '/Pwa2_192.png',
+            src: '/Pwa3_192.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any'
           },
           {
-            src: '/Pwa2_512.png',
+            src: '/Pwa3_512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable'
