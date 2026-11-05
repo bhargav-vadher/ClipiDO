@@ -30,13 +30,13 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: '/PWA1.jpg',
+            src: '/Pwa2_192.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any'
           },
           {
-            src: '/PWA1.jpg',
+            src: '/Pwa2_512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable'
@@ -50,4 +50,6 @@ export default defineConfig({
 
 
 
- 
+//  git add . 
+//  git commit -m "Added PWA support and updated index.html for apple touch icon"
+//  git push origin main
